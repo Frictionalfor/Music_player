@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Souta's Gift Player</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+   <div class="container">
+        <div class="header">
+            <h1>AESTHETIC</h1>
+            <div class="subtitle">Music Experience</div>
+        </div>
+
+        <div class="add-music bounce-in">
+            <div class="file-input-container">
+                <label for="musicFile" class="file-label">
+                    ✨ Add Your Vibes
+                </label>
+                <input type="file" id="musicFile" class="file-input" accept="audio/*" multiple>
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 1rem; font-weight: 300; letter-spacing: 1px;">
+                    Drop your favorite tracks • MP3, WAV, OGG, M4A
+                </p>
+            </div>
+        </div>
+
+        <div class="playlist fade-in">
+            <h2>Your Aesthetic Playlist</h2>
+            <div id="songList">
+                <div class="empty-state">
+                    Create your perfect aesthetic moment...<br>
+                    Add some dreamy tracks to begin ✨
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="player" id="player" style="display: none;">
+        <div class="player-content">
+            <div class="current-song">
+                <div class="current-song-name" id="currentSongName">No song selected</div>
+            </div>
+            
+            <div class="progress-container">
+                <span class="time" id="currentTime">0:00</span>
+                <div class="progress-bar" id="progressBar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+                <span class="time" id="totalTime">0:00</span>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" id="prevBtn">⏮</button>
+                <button class="control-btn play-pause" id="playPauseBtn">▶</button>
+                <button class="control-btn" id="nextBtn">⏭</button>
+                <div class="volume-container">
+                    <span class="volume-icon">♪</span>
+                    <input type="range" class="volume-slider" id="volumeSlider" min="0" max="100" value="70">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer"></audio>
+  <script src="script.js"></script>
+</body>
+
+</html>
